@@ -54,4 +54,6 @@ RDBMS
 
 # Relational Model 
 
-i. 
+1. It is a model designed by data scientist called as Edger Frank Codd [E.F.CODD] in the year of 1970s.
+2. In Realational Model we store the data in the form of rows and columns.
+3. If any DBMS follows Relation Model it will become RDBMS.
