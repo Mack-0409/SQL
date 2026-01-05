@@ -7,26 +7,26 @@ What is Data ?
 <!-- Attribute = Information  & Entity = Object -->
 
 Basic operation peform on the database are....[CRUD]
-CREATE / INSERT ,  
-READ / RETRIVE ,
-UPDATE / MODIFY ,
-DELETE / DROP .
+1. CREATE / INSERT ,  
+2. READ / RETRIVE ,
+3. UPDATE / MODIFY ,
+4. DELETE / DROP .
 
 Generally known as "CRUD" operations.
 
 # DBMS [Database Management System]
 
 DBMS is a software we use to maintain and mnage database.
-i. Authorization
-ii.Authentication
+1. Authorization
+2. Authentication
 
 In DBMS we use query language to communicate. It is used to store data in file format.
 
 # RDBMS 
 
 RDBMS - A DBMS software were data will stored int the form of tables.
-i. Authentication
-ii.Authorization
+1. Authentication
+2. Authorization
 
 We can use Structured Query Language [SQL] to communicate.
 

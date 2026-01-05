@@ -11,6 +11,6 @@
 -- FROM EMP;
 
 -- -- WAQTD  Hiredate, Comm, Salary of the employee
--- SELECT HIREDATE, COMM, Sal
+-- SELECT HIREDATE, COMM, SAL
 -- FROM EMP;
 
