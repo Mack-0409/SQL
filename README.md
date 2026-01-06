@@ -57,3 +57,28 @@ RDBMS
 1. It is a model designed by data scientist called as Edger Frank Codd [E.F.CODD] in the year of 1970s.
 2. In Realational Model we store the data in the form of rows and columns.
 3. If any DBMS follows Relation Model it will become RDBMS.
+
+# TABLES
+It is logical organization of data which consist row and columns.
+1. Rows / Records / Tuple 
+   It describes all the poperties of a single entity.
+
+2. Column / Attribute / Field / Properties
+   It describes single properties of all the entity. 
+
+3. Cell 
+   It is a smallest unit of a table or intersection between rows and columns generated a space that is called cell.   
+
+
+# RULES OF E.f.CODD 
+
+1. The data entered in a cell must be single value data.
+
+2. In RDBMS we can store everything in the form of tables including meta data.
+
+3. According to E.F.CODD we can store data in multiple tables and if it is needed we ca establish connection between those tables using key attributes.
+
+4. The data entered into a table must be validated in two ways.
+   1. By assigning datatypes
+   2. By assigning constraints 
+
