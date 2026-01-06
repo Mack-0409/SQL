@@ -82,3 +82,34 @@ It is logical organization of data which consist row and columns.
    1. By assigning datatypes
    2. By assigning constraints 
 
+# DATATYPES
+DataTypes - It is used to describe what kind of data will be going to store in particular column or memory location
+
+# NOTE :- 
+DataTypes are manadatory and constraints are optional.
+
+# Types of Data Types
+
+1. CHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+   Syntax :- CHAR(SIZE) 
+   SIZE :- It is used to specify number of character it can be stored.
+   1. In CHAR data types we can store up to 2000 character.
+   2. Character should be enclosed with in single quote.
+   3. Whenever we assign CHAR data types we must mention size for it.
+   4. Char follows fixed length memory allocation.   
+
+2. 1. VARCHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+   Syntax :- VARCHAR(SIZE)   
+
+   2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+   Syntax :- VARCHAR 2(SIZE)   
+
+3. DATE -It is used to store dat in some specified format.
+   Syntax - DATE
+   Format - 1. 'DD-MON-YY'
+            2. 'DD-MON-YYYY'
+
+4. NUMBER - It is used to store Numeric values.
+            [] not mandatory.
+   1. Precision - It is used to determine the number of digits used to store integer value. The maximum size of precision is 38.
+   2. Scale -                       
