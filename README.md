@@ -85,8 +85,7 @@ It is logical organization of data which consist row and columns.
 # DATATYPES
 DataTypes - It is used to describe what kind of data will be going to store in particular column or memory location
 
-# NOTE :- 
-DataTypes are manadatory and constraints are optional.
+NOTE :- DataTypes are manadatory and constraints are optional.
 
 # Types of Data Types
 
@@ -98,7 +97,8 @@ DataTypes are manadatory and constraints are optional.
    3. Whenever we assign CHAR data types we must mention size for it.
    4. Char follows fixed length memory allocation.   
 
-2. 1. VARCHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+2. VARCHAR DataTypes
+   1. VARCHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
    Syntax :- VARCHAR(SIZE)   
 
    2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
@@ -106,8 +106,9 @@ DataTypes are manadatory and constraints are optional.
 
 3. DATE -It is used to store dat in some specified format.
    Syntax - DATE
-   Format - 1. 'DD-MON-YY'
-            2. 'DD-MON-YYYY'
+   Format - 
+   1. 'DD-MON-YY'
+   2. 'DD-MON-YYYY'
 
 4. NUMBER - It is used to store Numeric values.
             [] not mandatory.
