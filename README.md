@@ -70,7 +70,7 @@ It is logical organization of data which consist row and columns.
    It is a smallest unit of a table or intersection between rows and columns generated a space that is called cell.   
 
 
-# RULES OF E.f.CODD 
+# RULES OF E.F.CODD 
 
 1. The data entered in a cell must be single value data.
 
