@@ -95,14 +95,22 @@ NOTE :- DataTypes are manadatory and constraints are optional.
    1. In CHAR data types we can store up to 2000 character.
    2. Character should be enclosed with in single quote.
    3. Whenever we assign CHAR data types we must mention size for it.
-   4. Char follows fixed length memory allocation.   
+   4. CHAR follows fixed length memory allocation.   
 
 2. VARCHAR DataTypes
    1. VARCHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
-   Syntax :- VARCHAR(SIZE)   
+   Syntax :- VARCHAR(SIZE)
+   1. In CHAR data types we can store up to 2000 character.
+   2. Character should be enclosed with in single quote.
+   3. Whenever we assign VARCHAR data types we must mention size for it.
+   4. VARCHAR follows variable length memory allocation.   
 
    2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
-   Syntax :- VARCHAR 2(SIZE)   
+   Syntax :- VARCHAR 2(SIZE)
+   1. In CHAR data types we can store up to 4000 character.
+   2. Character should be enclosed with in single quote.
+   3. Whenever we assign VARCHAR data types to any column automatically it will convert int VARCHAR 2.
+   4. VARCHAR follows variable length memory allocation.  
 
 3. DATE -It is used to store dat in some specified format.
    Syntax - DATE
@@ -113,4 +121,18 @@ NOTE :- DataTypes are manadatory and constraints are optional.
 4. NUMBER - It is used to store Numeric values.
             [] not mandatory.
    1. Precision - It is used to determine the number of digits used to store integer value. The maximum size of precision is 38.
-   2. Scale -                       
+   2. Scale - It is used to determine the number of digits used to store decimal [floating] value within the precision. The maximum is 127. Scale is not manadatory and the default value of scale is zero(0).
+   3. Examole -
+       1. NUMBER(5) :- +/- 99999
+       2. NUMBER(5,2) :- +/- 999.99
+       3. NUMMBER(4,4) :- +/- 0.9999
+       4. NUMBER(2,5) :- +/- .00099
+                       
+5. LARGE OBJECT - It is used to store large amount of Data.
+   1. Character Large Object :- It is used to store large amount of character upto 4GB.
+      Syntax - CLOB
+   2. Binary Large Object - It is used to store images, audios, videos, file in the form of binary.
+      Syantx - BLOB
+      
+# 
+          
