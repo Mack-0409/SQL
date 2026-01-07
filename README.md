@@ -76,7 +76,7 @@ It is logical organization of data which consist row and columns.
 
 2. In RDBMS we can store everything in the form of tables including meta data.
 
-3. According to E.F.CODD we can store data in multiple tables and if it is needed we ca establish connection between those tables using key attributes.
+3. According to E.F.CODD we can store data in multiple tables and if it is needed we can establish connection between those tables using key attributes.
 
 4. The data entered into a table must be validated in two ways.
    1. By assigning datatypes
