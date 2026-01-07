@@ -105,7 +105,7 @@ NOTE :- DataTypes are manadatory and constraints are optional.
    3. Whenever we assign VARCHAR data types we must mention size for it.
    4. VARCHAR follows variable length memory allocation.   
 
-   2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
    Syntax :- VARCHAR 2(SIZE)
    1. In CHAR data types we can store up to 4000 character.
    2. Character should be enclosed with in single quote.
