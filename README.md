@@ -134,5 +134,12 @@ NOTE :- DataTypes are manadatory and constraints are optional.
    2. Binary Large Object - It is used to store images, audios, videos, file in the form of binary.
       Syantx - BLOB
       
-# 
+# CONSTRAINTS
+Constraints are the conditions given to a column to validate the data
+There are 5 types of Constraints
+
+1. UNIQUE - It is a constraints assign to a column which should not accept duplicated / repeated values.
+2. NOT NULL - It is a constraints assign to column which should not accept null values.
+3. CHECK - Is is a constraints used for extra validation along with check we have to pass the condition, if the condition is satisfied it will accept the value or else reject the value.
+
           
