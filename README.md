@@ -160,4 +160,33 @@ There are 5 types of Constraints
    6. FOREIGN KEY present in child table but actually it belongs to parent table.
    7. It is also called as referential (reference) intigrity (data should not change) constraints.         
 
-          
+# STATEMENTS
+Statements are used to perform CRUD operations on the database.
+
+1. Data Definition Language (DDL)
+   1. CREATE
+   2. RENAME
+   3. ALTER
+   4. TRUNCATE
+   5. DROP
+      
+2. Data Manipulation Language (DML)
+   1. INSERT
+   2. UPDATE
+   3. DELETE
+      
+3. Transaction Control Language (TCL)
+   1. COMMIT
+   2. ROLLBACK
+   3. SAVEPOINT
+      
+4. Data Control Language (DCL)
+   1. GRANT
+   2. REVOKE
+      
+5. Data Query Language (DQL)
+   1. SELECT
+   2. PROJECTION
+   3. JOINS
+   4. SELECTIONS
+      
