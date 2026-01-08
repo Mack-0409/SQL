@@ -85,7 +85,7 @@ It is logical organization of data which consist row and columns.
 # DATATYPES
 DataTypes - It is used to describe what kind of data will be going to store in particular column or memory location
 
-NOTE :- DataTypes are manadatory and constraints are optional.
+NOTE :- DataTypes are mandatory and constraints are optional.
 
 # Types of Data Types
 
@@ -121,7 +121,7 @@ NOTE :- DataTypes are manadatory and constraints are optional.
 4. NUMBER - It is used to store Numeric values.
             [] not mandatory.
    1. Precision - It is used to determine the number of digits used to store integer value. The maximum size of precision is 38.
-   2. Scale - It is used to determine the number of digits used to store decimal [floating] value within the precision. The maximum is 127. Scale is not manadatory and the default value of scale is zero(0).
+   2. Scale - It is used to determine the number of digits used to store decimal [floating] value within the precision. The maximum is 127. Scale is not mandatory and the default value of scale is zero(0).
    3. Examole -
        1. NUMBER(5) :- +/- 99999
        2. NUMBER(5,2) :- +/- 999.99
@@ -140,6 +140,12 @@ There are 5 types of Constraints
 
 1. UNIQUE - It is a constraints assign to a column which should not accept duplicated / repeated values.
 2. NOT NULL - It is a constraints assign to column which should not accept null values.
-3. CHECK - Is is a constraints used for extra validation along with check we have to pass the condition, if the condition is satisfied it will accept the value or else reject the value.
+3. CHECK - Is is a constraints used for extra validation along with check we have to pass the condition, if the condition is satisfied it will accept the value or else              reject the value.
+4. PRIMARY KEY - It is used to identify records uniquely from the table.
+   1. There can be only one PRIMARY KEY in the table.
+   2. It does not accept any duplicate / repeated values.
+   3. It does not accept any NULL values.
+   4. It is a combination of UNIQUE and NOT NULL constraints.
+   5. It is not mandatory but highly recommented.  
 
           
