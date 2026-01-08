@@ -1,12 +1,12 @@
 # SQL
 SQL - It is a language which is used to communicate or interact with databae.
-SQL [Structured Query Language]
+SQL (Structured Query Language)
 
 What is Data ?
 -> Data is a raw fact that describes attribute of an entity. 
 <!-- Attribute = Information  & Entity = Object -->
 
-Basic operation peform on the database are....[CRUD]
+Basic operation peform on the database are....(CRUD)
 1. CREATE / INSERT ,  
 2. READ / RETRIVE ,
 3. UPDATE / MODIFY ,
@@ -14,7 +14,7 @@ Basic operation peform on the database are....[CRUD]
 
 Generally known as "CRUD" operations.
 
-# DBMS [Database Management System]
+# DBMS (Database Management System)
 
 DBMS is a software we use to maintain and mnage database.
 1. Authorization
@@ -28,7 +28,7 @@ RDBMS - A DBMS software were data will stored int the form of tables.
 1. Authentication
 2. Authorization
 
-We can use Structured Query Language [SQL] to communicate.
+We can use Structured Query Language (SQL) to communicate.
 
 
 # Difference between DBMS and RDBMS
@@ -44,9 +44,9 @@ DBMS
    RDBMS. 
 
 RDBMS
-1. A DBMS  software which allows Relational model becomes [RDBMS].                                       
+1. A DBMS  software which allows Relational model becomes (RDBMS).                                       
                                             
-2. We use Structured Query Language [SQL]. 
+2. We use Structured Query Language (SQL). 
                                                      
 3. In RDBMS data is stred in the the form of tables.
                                                     
@@ -54,7 +54,7 @@ RDBMS
 
 # Relational Model 
 
-1. It is a model designed by data scientist called as Edger Frank Codd [E.F.CODD] in the year of 1970s.
+1. It is a model designed by data scientist called as Edger Frank Codd (E.F.CODD) in the year of 1970s.
 2. In Realational Model we store the data in the form of rows and columns.
 3. If any DBMS follows Relation Model it will become RDBMS.
 
@@ -89,7 +89,7 @@ NOTE :- DataTypes are mandatory and constraints are optional.
 
 # Types of Data Types
 
-1. CHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+1. CHAR - It is used to store Uppercase (A-Z), LowerCase (a-z), Number (0-9), Special Character (@,#,$,&), Alpha Numeric character.
    Syntax :- CHAR(SIZE) 
    SIZE :- It is used to specify number of character it can be stored.
    1. In CHAR data types we can store up to 2000 character.
@@ -98,14 +98,14 @@ NOTE :- DataTypes are mandatory and constraints are optional.
    4. CHAR follows fixed length memory allocation.   
 
 2. VARCHAR DataTypes
-   1. VARCHAR - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+   1. VARCHAR - It is used to store Uppercase (A-Z), LowerCase (a-z), Number (0-9), Special Character (@,#,$,&), Alpha Numeric character.
    Syntax :- VARCHAR(SIZE)
    1. In CHAR data types we can store up to 2000 character.
    2. Character should be enclosed with in single quote.
    3. Whenever we assign VARCHAR data types we must mention size for it.
    4. VARCHAR follows variable length memory allocation.   
 
-2. VARCHAR 2 - It is used to store Uppercase [A-Z], LowerCase [a-z], Number [0-9], Special Character [@,#,$,&], Alpha Numeric character.
+2. VARCHAR 2 - It is used to store Uppercase (A-Z), LowerCase (a-z), Number (0-9), Special Character (@,#,$,&), Alpha Numeric character.
    Syntax :- VARCHAR 2(SIZE)
    1. In CHAR data types we can store up to 4000 character.
    2. Character should be enclosed with in single quote.
@@ -121,7 +121,7 @@ NOTE :- DataTypes are mandatory and constraints are optional.
 4. NUMBER - It is used to store Numeric values.
             [] not mandatory.
    1. Precision - It is used to determine the number of digits used to store integer value. The maximum size of precision is 38.
-   2. Scale - It is used to determine the number of digits used to store decimal [floating] value within the precision. The maximum is 127. Scale is not mandatory and the default value of scale is zero(0).
+   2. Scale - It is used to determine the number of digits used to store decimal (floating) value within the precision. The maximum is 127. Scale is not mandatory and the default value of scale is zero(0).
    3. Examole -
        1. NUMBER(5) :- +/- 99999
        2. NUMBER(5,2) :- +/- 999.99
@@ -139,13 +139,25 @@ Constraints are the conditions given to a column to validate the data
 There are 5 types of Constraints
 
 1. UNIQUE - It is a constraints assign to a column which should not accept duplicated / repeated values.
+    
 2. NOT NULL - It is a constraints assign to column which should not accept null values.
+   
 3. CHECK - Is is a constraints used for extra validation along with check we have to pass the condition, if the condition is satisfied it will accept the value or else              reject the value.
+   
 4. PRIMARY KEY - It is used to identify records uniquely from the table.
    1. There can be only one PRIMARY KEY in the table.
    2. It does not accept any duplicate / repeated values.
    3. It does not accept any NULL values.
    4. It is a combination of UNIQUE and NOT NULL constraints.
-   5. It is not mandatory but highly recommented.  
+   5. It is not mandatory but highly recommented.
+
+5. FOREIGN KEY - It is used to establish connection between multiple tables.
+   1. There can be multiple FOREIGN KEYS in a table.
+   2. It accepts duplicate / repeated values.
+   3. It acceps NULL values.
+   4. For an attribute to become FOREIGN KEY first it should be PRIMARY KEY in its own table.
+   5. When PRIMARY KEY of one table travels to another table then it is called as FOREIGN KEY.
+   6. FOREIGN KEY present in child table but actually it belongs to parent table.
+   7. It is also called as referential (reference) intigrity (data should not change) constraints.         
 
           
