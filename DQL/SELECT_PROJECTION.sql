@@ -14,3 +14,14 @@
 -- SELECT HIREDATE, COMM, SAL
 -- FROM EMP;
 
+-- -- WAQTD name, dsignation and ID of the employee
+-- SELECT ENAME, JOB, EMPNO
+-- FROM EMP;
+
+-- # EXPRESSION -
+-- A statement which gives result is called an EXPRESSION [or]
+-- The combination of operand and operator is called EXPRESSION
+-- EXPRESSION consists of two types
+-- 1. Operand [column name]
+-- 2. Operator 
+
