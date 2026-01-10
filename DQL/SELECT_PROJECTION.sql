@@ -54,3 +54,8 @@
 -- 2. SAL * 12 ANNUALSALARY
 -- 3. SAL * 12 "ANNUAL SALARY"
 -- 4. SAL * 12 ANNUAL_SALARY
+
+-- -- WAQTD half term salary and salary with 30 percent decrement along with annual salary.
+-- SELECT SAL * 6 "HALF_TERM_SAL", SAL - SAL * 0.3 "DECREMENT_SAL",SAL * 12 "ANNUAL SALARY"
+-- FROM EMP; 
+
