@@ -59,3 +59,12 @@
 -- SELECT SAL * 6 "HALF_TERM_SAL", SAL - SAL * 0.3 "DECREMENT_SAL",SAL * 12 "ANNUAL SALARY"
 -- FROM EMP; 
 
+-- DISTINCT
+-- Distinct is a clause which is used to remove duplicated or repeated values from the table.
+-- For DISTINCT clause we can pass column name or an expression as an argument.
+-- We can pass DISTINCT clause in SELECT clause as a first argument.
+-- We can pass multiple column to DISTINCT clause it will remove repeated or duplicated values in combination.
+
+-- -- WAQT remove duplicated or repeated values from the salary column.
+-- SELECT DISTINCT SAL
+-- FROM EMP; 
