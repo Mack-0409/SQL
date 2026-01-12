@@ -8,3 +8,11 @@
 -- 3. ALTER
 -- 4. TRUNCATE
 -- 5. DROP
+
+
+-- 2. RENAME
+--     This statement is used to change the existing object name.
+
+-- SYNTAX - RENAME EXISTING_OBJECT_NAME TO NEW_NAME;
+
+-- EXAMPLE - RENAME ZOMATO TO SWIGGY;

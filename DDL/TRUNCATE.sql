@@ -8,3 +8,15 @@
 -- 3. ALTER
 -- 4. TRUNCATE
 -- 5. DROP
+
+
+
+-- 4. TRUNCATE 
+--     This statement is used to remove all the records from the table permanently.
+
+
+-- SYNTAX - TRUNCATE TABLE TABLE_NAME;
+
+
+-- EXAMPLE - TRUNCATE TABLE EMP;
+
