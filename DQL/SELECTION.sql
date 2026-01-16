@@ -252,5 +252,53 @@
 
     -- 2. Behaviour of '_' - It can accepts any character but only once.
 
-WAQTD details of employee if they have character 'A' has a second character in the NAME.
+-- -- WAQTD details of employee if they have character 'A' has a second character in the NAME.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE '_A%';
+
+-- -- WAQTD details of employee if they have character 'A' in their name as a first character.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE 'A%';
+
+-- -- WAQTD details of employee if they have character 'A' as a third character in their name.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE '__A%';
+
+-- -- WAQTD details of employee if they have character 'A' as a second last character in their name.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE '%A_';
+
+-- -- WAQTD details of employee if they have character 'A' as a first character and character M as a second last character in their name.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE 'A%M_';
+
+-- -- WAQTD if they have 4 character in their name.
+-- SELECT *
+-- FROM EMP
+-- WHERE ENAME LIKE '____';
+
+-- -- WAQTD details of employee if they are hired in the year of 1981.
+-- SELECT *
+-- FROM EMP
+-- WHERE HIREDATE LIKE '%81';
+
+-- -- WAQTD details of employee if they are hired in the month of feb.
+-- SELECT *
+-- FROM EMP
+-- WHERE HIREDATE LIKE '%FEB%';
+
+-- -- WAQTD details of employee if there salary is starting with the digit of 50.
+-- SELECT *
+-- FROM EMP
+-- WHERE SAL LIKE '50%';
+
+-- -- WAQTD details of employee if they have character 'A' or character 'S' in there name and they have character 'MAN' in there job.
+-- SELECT *
+-- FROM EMP
+-- WHERE ( ENAME LIKE '%A%' OR ENAME LIKE '%S%' ) AND JOB LIKE '%MAN%'; 
 
