@@ -187,3 +187,70 @@
 -- BETWEEN operators works by including the given range.
 
 -- SYNTAX - COLUMN_NAME / EXPRESSION BETWEEN (LOWER_RANGE AND HIGHER_RANGE);
+
+-- -- WAQTD details of the employee if they are earning within the range of 1000 and 3000.
+-- SELECT *
+-- FROM EMP
+-- WHERE SAL BETWEEN (1000 AND 3000);
+
+-- -- WAQTD details of employee if they are hired after 1980 and before 1986 and earning within the range of 1000 and 5000.  
+-- SELECT *
+-- FROM EMP
+-- WHERE HIREDATE BETWEEN ('01-JAN-81' AND '31-DEC-85') AND 
+--       SAL BETWEEN (1000 AND 5000);  
+
+-- -- WAQTD details of the employee earning more than 2000 and less than 6000 and they are having employee number of 7782 or 7844 or 7499.
+-- SELECT *
+-- FROM EMP
+-- WHERE SAL BETWEEN (2001 AND 5999) AND EMPNO IN (7782, 7844, 7499); 
+
+-- 4. NOT BETWEEN - It is similar to between operator insteaded of selecting the values it will reject the values.
+-- NOT BETWEEN (STARTING_VALUE , ENDING_VALUE)
+-- We cannot interchangethe value.
+-- NOT BETWEEN operators works by including the given range.
+
+-- SYNTAX - COLUMN_NAME / EXPRESSION NOT BETWEEN ( LOWER_RANGE AND HIGHER_RANGE )
+
+-- -- WAQTD details of the employee if they are not hired in the year of 1981.
+-- SELECT *
+-- FROM EMP
+-- WHERE HIREDATE NOT BETWEEN ('01-JAN-81' AND '31-DEC-81');
+
+
+-- 5. IS - It is a special operator which is used to compared with null.
+-- SYNTAX - COLUMN_NAME / EXPRESSION IS NULL;
+
+-- -- WAQTD details of the employee if they are not earning commission
+-- SELECT *
+-- FROM EMP
+-- WHERE COMM IS NULL;
+
+-- -- WAQTD the details of employee if they don't have reporting manager.
+-- SELECT *
+-- FROM EMP
+-- WHERE MGR IS NULL;
+
+-- 6. IS NOT - It is special operator which is used to compare with NOT NULL.
+-- SYNTAX - COLUMN_NAME / EXPRESSION IS NOT NULL;
+
+-- -- WAQTD details of employee if they are earning commission.
+-- SELECT *
+-- FROM EMP
+-- WHERE COMM IS NOT NULL;
+
+-- 7. LIKE - It is used to match the pattern.
+--    SYNTAX - COLUN_NAME / EXPRESSION LIKE 'PATTERN_TO_MATCH';
+
+--     To achieve pattern matching we have 2 special character such as.
+--     1. % - It can accept any number of character any number of times
+--         Starts with character A - 'A%'
+--         Ends with character A - '%A'
+--         Has character A - '%A%'
+--         Has character A present twice - '%A%A%'
+--         Has two consecutive A - '%AA%'
+--         Starts with A and ends with N - 'A%N'
+
+    -- 2. Behaviour of '_' - It can accepts any character but only once.
+
+WAQTD details of employee if they have character 'A' has a second character in the NAME.
+
