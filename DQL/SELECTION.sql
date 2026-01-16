@@ -302,3 +302,34 @@
 -- FROM EMP
 -- WHERE ( ENAME LIKE '%A%' OR ENAME LIKE '%S%' ) AND JOB LIKE '%MAN%'; 
 
+
+-- 8. NOT LIKE - It is similar to like operator intead of selecting the pattern it will reject those pattern.
+
+-- SYNTAX - COLUMN_NAME / EXPRESSION NOT LIKE 'PATTERN_TO_MATCH';
+
+-- -- WAQTD details of employee if they are not hired i the year of 1981.
+-- SELECT *
+-- FROM EMP
+-- WHERE HIREDATE NOT LIKE '%81';
+
+-- # CONCATENATION OPERATOR ( || )
+-- It is used to join or merge given 2 strings or more than two column.
+
+-- SYNTAX - SELECT 'STRING1' || 'STRING2'
+-- EXAMPLE - SELECT 'MR.' || ENAME || DEPTNO || MGR
+--           FROM EMP;
+
+-- WAQTD official mail id od an employee.
+-- SELECT ENAME || EMPNO || DEPTNO || '@gmail.com'
+-- FROM EMP;
+
+
+
+
+
+-- # FUNCTION - Function are the block of code or list of instruction which is used to perform specific task.
+-- Types of Function
+-- 1. IN BUILT FUNCTION
+-- 2. USER DEFINE FUNCTION
+
+
