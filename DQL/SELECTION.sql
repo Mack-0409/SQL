@@ -115,3 +115,14 @@
          -- WHERE CONDITION 1 OR CONDITION 2.......................CONDITION N.
 
 
+-- -- WAQTD details of employee working as analyst or clerk or salesman.
+-- SELECT *
+-- FROM EMP
+-- WHERE JOB = 'ANALYST' OR JOB = 'CLERK' OR 'SALESMAN';
+
+-- -- WAQTD details of employee working as analyst or clerk but they are earning more than 2000
+-- SELECT *
+-- FROM EMP
+-- WHERE (JOB = 'CLERK' OR JOB = 'ANALYST') AND SAL > 2000; 
+
+-- WAQTD details of employee hired after 1982 and before 1987 working as manager or salesman in department nuber 20 or 30.
