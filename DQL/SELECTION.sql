@@ -125,4 +125,48 @@
 -- FROM EMP
 -- WHERE (JOB = 'CLERK' OR JOB = 'ANALYST') AND SAL > 2000; 
 
--- WAQTD details of employee hired after 1982 and before 1987 working as manager or salesman in department nuber 20 or 30.
+-- -- WAQTD details of employee hired after 1982 and before 1987 working as manager or salesman in department number 20 or 30.
+-- SELECT * 
+-- FROM EMP 
+-- WHERE HIREDATE > '31-DEC-82' AND 
+--       HIREDATE < '01-JAN-87' AND 
+--       ( JOB = 'MANAGER' OR JOB = 'SALESMAN' ) AND 
+--       ( DEPTNO = 20 OR DEPTNO = 30 ); 
+
+
+-- 3. NOT - It is used to inverse or reject the conditions.
+-- SYNTAX - SELECT COLUMN_NAME / EXPRESSION
+         -- FROM EMP
+         -- WHERE NOT CONDITION;
+
+-- -- WAQTD details of employee if they are not working in department number 20.
+-- SELECT *
+-- FROM EMP
+-- WHERE NOT DEPTNO = 20;  
+
+-- -- WAQTD details of employee if they are not working as analyst or salesman.
+-- SELECT *
+-- FROM EMP
+-- WHERE NOT ( JOB = 'ANALYST' OR JOB = 'SALESMAN' );
+
+-- -- WAQTD details of employee if they are working in department number 10, 20, 30, 40.
+-- SELECT *
+-- FROM EMP
+-- WHERE DEPTNO = 10 OR DEPTNO = 20 OR DEPTNO = 30 OR DEPTNO = 40;
+
+
+-- # SPECIAL OPERATOR 
+-- 1. IN - It is multi value operator which accepts multiple values at R.H.S.
+--         It behaves like equal operator.
+--         It returns true if it is satisfy any one of the value at R.H.S.
+
+-- SYNTAX - COLUMN_NAME / EXPRESSION IN (VALUE1, VALUE2, VLAUE3, ........)
+-- EXAMPLE - SAL IN (100, 700);
+
+-- -- WAQTD details of employee working as manager or president and working in department 10 or 20 and hired after 1980.
+-- SELECT *
+-- FROM EMP
+-- WHERE JOB IN ( 'MANAGER', 'PRESIDENT' ) AND
+--       DEPTNO IN (10 , 20) AND 
+--       HIREDATE > '31-DEC-80';
+
