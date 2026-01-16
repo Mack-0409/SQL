@@ -170,3 +170,20 @@
 --       DEPTNO IN (10 , 20) AND 
 --       HIREDATE > '31-DEC-80';
 
+-- 2. NOT IN - It is similar to IN operator instad of selecting it, it will reject the values.
+-- SYNTAX - COUMN_NAME / EXPRESSION NOT IN (VALUES1, VALUES2, ..........) 
+-- EXAMPLE - SAL NOT IN (100, 700);
+
+-- -- WAQTD details of the employee if they are working in department number 10 or 30 but they are not working as salesman or manager or clerk.
+-- SELECT *
+-- FROM EMP
+-- WHERE DEPTNO IN (10 , 30) AND
+--       JOB NOT IN ('SALESMAN', 'MANAGER', 'CLERK');
+
+
+-- 3. BETWEEN - It is used whenever we have a range of he values.
+-- BETWEEN (STARTING_VALUE, ENDING_VALUE)
+-- We cannot inter change the values.
+-- BETWEEN operators works by including the given range.
+
+-- SYNTAX - COLUMN_NAME / EXPRESSION BETWEEN (LOWER_RANGE AND HIGHER_RANGE);
