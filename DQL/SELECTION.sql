@@ -349,3 +349,20 @@ LIST OF MRF [MULTI ROW FUNCTIONS]
 
 5. COUNT() - It is used to obtain the number of values present in the column.  
 
+# CHARACTERISTIC OF MULTI ROW FUNCTION () - 
+
+1. For MULTI ROW FUNCTION () we can pass only one argument.
+2. Along with MULTI ROW FUNCTION we cannot pass any other column name in the SELECT clause.
+3. MULTI ROW FUNCTION ignores NULL.
+4. In WHERE claues we cannot pass MULTI ROW FUNCTION.
+5. COUNT() is only one MULTI ROW FUNCTION which accepts * as an argument.
+
+
+-- WAQTD number of employees working in department 20.
+SELECT COUNT(*)
+FROM EMP
+WHERE DEPTNO = 20; 
+
+
+
+
