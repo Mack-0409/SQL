@@ -330,10 +330,22 @@
 -- # FUNCTION - Function are the block of code or list of instruction which is used to perform specific task.
 -- Types of Function
 -- 1. IN BUILT FUNCTION
-        -- 1. SINGLE ROW FUNCTIONS [SRF] - It executes row by row. It takes one input executes and generate one output and goes to the next input and goes on. If we pass 'n' number of inputs to single row functons it returns 'n' number of outputs.
 
-        -- 2. MULTI ROW FUNCTIONS / AGGREGATE / GROUP FUNCTIONS [MRF] - It is also known as group function or aggregate functions. It executes group by group. It takes all the input at once and aggregate [combine] it and generate single output. If we pass 'n' number of inputs to multi row function it will return single input.
+-- 1. SINGLE ROW FUNCTIONS [SRF] 
+-- It executes row by row. It takes one input executes and generate one output  and goes to the next input and goes on. If we pass 'n' number of inputs to single row functons it returns 'n' number of outputs.
 
--- 2. USER DEFINE FUNCTION
+-- 2. MULTI ROW FUNCTIONS / AGGREGATE / GROUP FUNCTIONS [MRF] 
+-- It is also known as group function or aggregate functions. It executes group by group. It takes all the input at once and aggregate [combine] it and generate single output. If we pass 'n' number of inputs to multi row function it will return single input.
 
+LIST OF MRF [MULTI ROW FUNCTIONS]
+
+1. MAX() - It is used to obtain the maximun value present in the column.
+
+2. MIN() - It is used to obtain the minimum value present in the column.
+
+3. AVG() - It is used to obtain the average of the value present in the column.
+
+4. SUM() - It used to obtain the summation of the value present in the column.
+
+5. COUNT() - It is used to obtain the number of values present in the column.  
 
