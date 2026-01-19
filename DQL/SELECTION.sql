@@ -463,4 +463,4 @@ ORDER OF EXECUTION -
 4. We write group filtr condition in HAVING clause.
 5. We can pass MULTI ROW FUNCTION in HAVING clause.
 6. To use HAVING clause GROUP clause is manadatory.
-7. We can pass multiple conditions in HAVING cause by using logical operator. 
+7. We can pass multiple conditions in HAVING clause by using logical operator. 
