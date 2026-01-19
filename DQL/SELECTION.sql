@@ -404,7 +404,63 @@ ORDER OF EXECUTION -
 6. GROUP BY clause can be used with or without WHERE clause.
 
 
--- WAQTD number of employees working ineach department.
+-- WAQTD number of employees working in each department.
 SELECT COUNT(*), JOB
 FROM EMP
 GROUP BY JOB;
+
+-- WAQTD MAX and MIN salary of th employee if they have character A in there name in each department.
+SELECT MAX(SAL) , MIN(SAL) , DEPTNO
+FROM EMP
+WHERE ENAME LIKE '%A%'
+GROUP BY DEPTNO;
+
+-- WAQTD MAX salary of the employee along with there average salary if there salary is more than 2000 and they are hired after 1980 in each job. 
+SELECT MAX(SAL) , AVG(SAL) , JOB
+FROM EMP
+WHERE SAL > 2000 AND HIREDATE > '31-DEC-80'
+GROUP BY JOB;
+
+-- WAQTD UNIQUE SALARY
+SELECT SAL
+FROM EMP
+GROUP BY SAL;
+
+-- WAQTD number of times salary have been repeated in the employee table.
+SELECT COUNT(*), SAL
+FROM EMP
+GROUP BY SAL;
+
+-- WAQTD number of employees working in department if there are atleast 2 employee working in each department.
+SELECT COUNT(*) , DEPTNO
+FROM EMP
+GROUP BY DEPTNO;
+
+
+----------------------------------------------------------------------------------------------------------------
+
+# HAVING CLAUSE - It is used to filter the groups.
+
+SYNTAX - SELECT COLUMN_NAME / GROUP BY EXPRESSION
+         FROM TABLE_NAME
+         [WHERE <FILTER CONDITION>]
+         GROUP BY COLUMN_NAME / EXPRESSION 
+         HAVING <GROUP FILTER CONDITION>;   
+
+
+ORDER OF EXECUTION - 
+1. FROM TABLE_NAME
+2. [WHERE <FILTER CONDITION>]
+3. GROUP BY COLUMN_NAME / EXPRESSION 
+4. HAVING <GROUP FILTER CONDITION>;  
+5. SELECT COLUMN_NAME / GROUP BY EXPRESSION   
+
+
+# CHARACTERISTIC OF GROUP BY CLAUSE -
+1. HAVING clause is used to filter the GROUPS.
+2. HAVING clause xecutes GROUP BY GROUP.
+3. HAVING clause executes after the execution of GROUP BY clause.
+4. We write group filtr condition in HAVING clause.
+5. We can pass MULTI ROW FUNCTION in HAVING clause.
+6. To use HAVING clause GROUP clause is manadatory.
+7. We can pass multiple conditions in HAVING cause by using logical operator. 
