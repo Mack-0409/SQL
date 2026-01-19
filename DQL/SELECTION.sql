@@ -324,7 +324,7 @@ SELECT ENAME || EMPNO || DEPTNO || '@gmail.com'
 FROM EMP;
 
 
-
+----------------------------------------------------------------------------------------------------------------
 
 
 # FUNCTION - Function are the block of code or list of instruction which is used to perform specific task.
@@ -361,8 +361,50 @@ LIST OF MRF [MULTI ROW FUNCTIONS]
 -- WAQTD number of employees working in department 20.
 SELECT COUNT(*)
 FROM EMP
-WHERE DEPTNO = 20; 
+WHERE DEPTNO = 20;
+
+-- WAQTD MAX and MIN salary of the employee hired after 1982 and beore 1988 and they have character 'MAN' in there job on first.
+SELECT MIN(SAL), MAX(SAL)
+FROM EMP
+WHERE HIREDATE BETWEN ( '01-JAN-83' AND '31-DEC-87') AND JOB LIKE 'MAN%';
+
+-- WAQTD number of employee working in department number 10,20,30.
+SELECT COUNT(*)
+FROM EMP
+WHERE DEPTNI IN (10,20,30);
+
+-- WAQTD number of employee working in each departmenet.
+SELECT COUNT(*)
+FROM EMP;
 
 
+----------------------------------------------------------------------------------------------------------------
 
 
+# GROUP BY - It is used to group the records.
+
+SYNTAX - SELECT GROUP_FUNCTION / GROUP_BY_EXPRESSION
+         FROM TABLE_NAME
+         [ WHERE <FILTER CONDITION> ]
+         GROUP BY COLUMN_NAME / EXPRESSION;
+
+ORDER OF EXECUTION - 
+1. FROM TABLE_NAME
+2. [ WHERE <FILTER CONDITION> ] ----------------ROW BY ROW
+3. GROUP BY COLUMN_NAME / EXPRESSION; ----------ROW BY ROW  
+4. SELECT GROUP_FUNCTION / GROUP_BY_EXPRESSION--GROUP BY GROUP
+
+
+# CHARACTERISTIC OF GROUP BY CLAUSE 
+1. GROUP BY clause is used to group the records.
+2. GROUP BY clause executes GROUP BY GROUP.
+3. After the execution of GROUP BY clause we are getting groups.
+4. Any clause executes after GROUP BY clause it executes GROUP BY GROUP.
+5. The column name / Expression used for grouping can be written in the SELECT clause that will be called as GROUP_BY_EXPRESSION.
+6. GROUP BY clause can be used with or without WHERE clause.
+
+
+-- WAQTD number of employees working ineach department.
+SELECT COUNT(*), JOB
+FROM EMP
+GROUP BY JOB;
