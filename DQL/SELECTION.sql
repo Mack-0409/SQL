@@ -472,3 +472,11 @@ FROM EMP
 JOB = ANALYST
 GROUP BY DEPTNO
 HAVING COUNT(*) = 2;
+
+-- WAQTD average salary of the employee working in each job if average salary is needed to pay for all the employee is more than 3450.
+SELECT AVG(SAL), JOB
+FROM EMP
+GROUP BY JOB
+HAVING AVG(SAL) > 3450;
+
+
