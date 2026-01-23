@@ -479,4 +479,9 @@ FROM EMP
 GROUP BY JOB
 HAVING AVG(SAL) > 3450;
 
-
+-- WAQTD maximum and minimum salary of employee working in each department if there maximum salary is more than 2000 and less than 5000 and they are earning in the range of 1000 to 7000 as a clerk or analysis.
+SELECT MAX(SAL) , MIN(SAL), DEPTNO 
+FROM EMP
+WHERE SAL BETWEEN 1000 AND 7000 AND  JOB IN ('ANALYST','CLERK') 
+GROUP BY DEPTNO
+HAVING MAX(SAL) > 2000 AND MAX(SAL) < 5000;
