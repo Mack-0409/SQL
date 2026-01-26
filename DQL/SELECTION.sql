@@ -479,6 +479,7 @@ FROM EMP
 GROUP BY JOB
 HAVING AVG(SAL) > 3450;
 
+HEAD
 -- WAQTD maximum and minimum salary of employee working in each department if there maximum salary is more than 2000 and less than 5000 and they are earning in the range of 1000 to 7000 as a clerk or analysis.
 SELECT MAX(SAL) , MIN(SAL), DEPTNO 
 FROM EMP
@@ -486,10 +487,12 @@ WHERE SAL BETWEEN 1000 AND 7000 AND  JOB IN ('ANALYST','CLERK')
 GROUP BY DEPTNO
 HAVING MAX(SAL) > 2000 AND MAX(SAL) < 5000;
 
+7cf91f8cfbc111b10a1f01b38a2fe808f97c7a60
 -- WAQTD repeated salary
 SELECT COUNT(*), SAL
 FROM EMP
 GROUP BY SAL
+HEAD
 HAVING COUNT(*) > 1; 
 
 
@@ -505,3 +508,5 @@ HAVING COUNT(*) > 1;
 2. HAVING clause executes GROUP BY GROUP.
 3. In WHERE clause we use MRF[Multi Row Function].
 4. HAVING clause executes after GROUP BY clause.
+
+7cf91f8cfbc111b10a1f01b38a2fe808f97c7a60
