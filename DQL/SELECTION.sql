@@ -491,3 +491,17 @@ SELECT COUNT(*), SAL
 FROM EMP
 GROUP BY SAL
 HAVING COUNT(*) > 1; 
+
+
+# WHERE CLAUSE 
+1. WHERE clause is used to filter the records.
+2. WHERE clause executes row by row..
+3. In WHERE clause we cannot use MRF[Multi Row Function].
+4. WHERE clause executes before GROUP BY clause. 
+
+
+# HAVING CLAUSE
+1. HAVING clause is used to filter the GROUPS.
+2. HAVING clause executes GROUP BY GROUP.
+3. In WHERE clause we use MRF[Multi Row Function].
+4. HAVING clause executes after GROUP BY clause.
