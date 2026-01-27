@@ -509,3 +509,48 @@ HAVING COUNT(*) > 1;
 4. HAVING clause executes after GROUP BY clause.
 
 
+-------------------------------------------------------------------------------------------------------------------------------
+
+# ORDER BY
+1. It is used to sort the records in ascending or descending order.
+2. ORDER BY clause must be written as last clause in the statement.
+3. ORDER BY clause executes after the SELECT clause.
+4. By default, ORDER BY clause sort the records in ascending order.
+5. We can pass column name or expression as an argument in ORDER BY clause.
+6. We can pass ALIAS name in ORDER BY clause.
+
+SYNTAX - SELECT GROUP_FUNCTION / GROUP_BY_EXPRESSION
+         FROM TABLE_NAME
+         [WHERE <FILTER CONDITION>]
+         GROUP BY COLUMN_NAME / EXPRESSION
+         HAVING <GROUP_FILTER_CONDITION>
+         ORDER BY GROUP_FUNCTION / GROUP_BY_EXPRESSION [ASC] / DESC;
+
+SYNTAX - SELECT COLUMN_NAME / EXPRESSION
+         FROM TABLE_NAME
+         WHERE <FILTER CONDITION>
+         ORDER BY COLUMN_NAME / EXPRESSION [ASC] / DESC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
