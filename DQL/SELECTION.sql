@@ -533,6 +533,25 @@ SYNTAX - SELECT COLUMN_NAME / EXPRESSION
 
 
 
+-- WAQTD salaries of the employee in arranging order.
+SELECT SAL
+FROM EMP
+ORDER BY SAL;
+
+-- WAQTD salaries of employee in decending order.
+SELECT SAL
+FROM EMP
+ORDER BY SAL DESC;
+
+-- WAQTD name, salaries of employee in decreasing order.
+SELECT ENAME, SAL
+FROM EMP
+ORDER BY ENAME, SAL DESC;
+
+-- WAQTD details of employee earning more than 2000.
+SELECT *
+FROM EMP
+WHERE SAL > 2000; 
 
 
 
