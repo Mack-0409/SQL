@@ -547,14 +547,29 @@ ORDER BY SAL DESC;
 SELECT ENAME, SAL
 FROM EMP
 ORDER BY ENAME, SAL DESC;
-
 -- WAQTD details of employee earning more than 2000.
 SELECT *
 FROM EMP
 WHERE SAL > 2000; 
 
+-------------------------------------------------------------------------------------------------------------------------------
 
+# SUBQUERY 
+A query which is written inside another query is called as Subquery.
+1. Inner query
+      Inner query executes first and generates the output.
+      The output for the inner query will be given as input to the outer query.
 
+2. Outer query
+      The outer query generates the result.
+      Therefore, we can say that the outer query is dependent on inner query.
+
+-- WAQTD details of employee earning more than smith.
+SELECT *
+FROM EMP
+WHERE SAL > (SELECT SAL
+             FROM EMP
+             WHERE ENAME = 'SMITH');
 
 
 
