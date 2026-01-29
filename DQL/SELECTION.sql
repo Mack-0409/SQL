@@ -564,15 +564,22 @@ A query which is written inside another query is called as Subquery.
       The outer query generates the result.
       Therefore, we can say that the outer query is dependent on inner query.
 
+
+# CASE 1 - Whenever we have unknown or indirect condition in the question then we use the concept of Subquery. 
+
 -- WAQTD details of employee earning more than smith.
-SELECT *
+SELECT EMP.*
 FROM EMP
 WHERE SAL > (SELECT SAL
              FROM EMP
              WHERE ENAME = 'SMITH');
 
-
-
+-- WAQTD details of employee if there annual salary is more than adams annual salary.
+SELECR EMP.*
+FROM EMP
+WHERE SAL * 12 > (SELECT SAL * 12
+                  FROM EMP
+                  WHERE ENAME = 'ADAMS');  
 
 
 
