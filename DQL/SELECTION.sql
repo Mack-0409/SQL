@@ -575,11 +575,55 @@ WHERE SAL > (SELECT SAL
              WHERE ENAME = 'SMITH');
 
 -- WAQTD details of employee if there annual salary is more than adams annual salary.
-SELECR EMP.*
+SELECT EMP.*
 FROM EMP
 WHERE SAL * 12 > (SELECT SAL * 12
                   FROM EMP
                   WHERE ENAME = 'ADAMS');  
+
+-- WAQTD details of employee hired after jones and earning more than 2000.
+SELECT *
+FROM EMP
+WHERE SAL > 2000 AND HIREDATE > (SELECT HIREDATE
+                                 FROM EMP
+                                 WHERE ENAME = 'JONES');
+
+-- WAPTD name, sal, deptno, of the employee earn more than 2000 and work in same department as jones.
+SELECT ENAME, SAL, DEPTNO
+FROM EMP
+WHERE SAL > 2000 AND DEPTNO = (SELECT DEPTNO
+                               FROM EMP
+                               WHERE ENAME = 'JONES');
+
+-- WAPTD names of the employee working in same deptno as james and earning salary more than adams and working in the same role as miller amd hired after martin.
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
