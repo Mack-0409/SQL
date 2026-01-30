@@ -596,7 +596,19 @@ WHERE SAL > 2000 AND DEPTNO = (SELECT DEPTNO
                                WHERE ENAME = 'JONES');
 
 -- WAPTD names of the employee working in same deptno as james and earning salary more than adams and working in the same role as miller amd hired after martin.
-   
+SELECT ENAME
+FROM EMP
+WHERE DEPTNO = (SELECT DEPTNO
+                FROM EMP
+                WHERE ENAME = 'JAMES') AND SAL > (SELECT SAL
+                                                  FROM EMP
+                                                  WHERE ENAME = 'ADAMS') AND JOB = (SELECT JOB
+                                                                                    FROM EMP
+                                                                                    WHERE ENAME = 'MILLER') AND HIREDATE > (SELECT HIREDATE
+                                                                                                                            FROM EMP
+                                                                                                                            WHERE ENAME='MARTIN');                   
+
+
 
 
 
