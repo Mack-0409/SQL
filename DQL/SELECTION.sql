@@ -609,6 +609,40 @@ WHERE DEPTNO = (SELECT DEPTNO
                                                                                                                             WHERE ENAME='MARTIN');                   
 
 
+# CASE 2 - Whenever the data is to be seleted and condition to be executed are present in different table than we use the concept of subquery.
+
+-- WAQTD dept name of king.
+SELECT DNAME
+FROM DEPT
+WHERE DEPTNO = (SELECT DEPTNO
+                FROM EMP
+                WHERE ENAME = 'KING');
+
+-- WAQTD details of employee working in location of chicago.
+SELECT *
+FROM EMP
+WHERE DEPTNO = (SELECT DEPTNO
+                FROM DEPT
+                WHERE LOC = 'CHICAGO');
+
+-- WAQTD name, salary of the employee who are earning more than scott and working in deptno 20.
+SELECT ENAME, SAL
+FROM EMP
+WHERE SAL > (SELECT SAL
+             FROM EMP
+             WHERE ENAME = 'SCOTT') AND DEPTNO = 20;
+
+-- WAQTD details of employee earning more than allen and working in same job as miller and workig in location of chicago.
+SELECT *
+FROM EMP
+WHERE SAL > (SELECT SAL
+             FROM EMP
+             WHERE ENAME = 'ALLEN') AND JOB = (SELECT JOB
+                                               FROM EMP
+                                               WHERE ENAME = 'MILLER') AND DEPTNO = (SELECT DEPTNO
+                                                                                     FROM DEPT
+                                                                                     WHERE LOC = 'CHICAGO');
+   
 
 
 
