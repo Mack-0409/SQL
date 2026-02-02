@@ -642,7 +642,19 @@ WHERE SAL > (SELECT SAL
                                                WHERE ENAME = 'MILLER') AND DEPTNO = (SELECT DEPTNO
                                                                                      FROM DEPT
                                                                                      WHERE LOC = 'CHICAGO');
-   
+
+-- WAQTD dept name of clerk
+SELECT DNAME
+FROM DEPT
+WHERE DEPTNO IN (SELECT DEPTNO
+                 FROM EMP
+                 WHERE JOB = 'CLERK');
+
+
+NOTE - Compare only 1 value use '=' operator.
+       Compare many values use 'IN' operator.
+
+        
 
 
 
