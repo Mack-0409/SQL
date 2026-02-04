@@ -654,7 +654,21 @@ WHERE DEPTNO IN (SELECT DEPTNO
 NOTE - Compare only 1 value use '=' operator.
        Compare many values use 'IN' operator.
 
-        
+
+--WAQTD number of employees working as clerk in the same department number as smith and earning more than king and hired after martin on the location Boston.
+SELECT COUNT(*)
+FROM EMP
+WHERE JOB = 'CLERK' DEPTNO = (SELECT DEPTNO
+                              FROM EMP
+                              WHERE ENAME = 'SMITH') 
+      AND SAL > (SELECT SAL                       
+                 FROM EMP
+                 WHERE ENAME = 'KING') 
+      AND HIREDATE > (SELECT HIREDATE
+                      FROM EMP
+                      WHERE ENAME = 'MARTIN') AND DEPTNO = (SELECT DEPTNO
+                                                            FROM DEPT
+                                                            WHERE LOC = 'BOSTON');      
 
 
 
