@@ -671,10 +671,42 @@ WHERE JOB = 'CLERK' DEPTNO = (SELECT DEPTNO
                                                             WHERE LOC = 'BOSTON');      
 
 
+# TYPES OF SUBQUERY
+1. SINGLE ROW SUBQUERY
+      If the subquery returns exactly one value, then is known as single row subquery.
+      If it returns only one value then we can use the normal opeators at the special operators to compare the values.
+
+2. MULTI  ROW SUBQUERY
+      If the subquery returns exactly more than one value, then it is known as multi row subquery.
+      If it returns more than one value then we cannot use the normal operators we have to use special operators to compare the values.
 
 
+NOTE - It is difficult to identify whether a query belongs single row subquery or multi row subquery so it is recommended to use special operator to compare the  values.
 
 
+-- WAQTD location of employee who is hired after the employee who is having salary more than 4000.
+SELECT LOC
+FROM DEPT
+WHERE DEPTNO = (SELECT DEPTNO
+                FROM EMP
+                WHERE HIREDATE > (SELECT HIREDATE
+                                  FROM EMP
+                                  WHERE SAL > 4000));
+
+
+-- WAPTD maximum salary
+SELECT MAX(SAL)
+FROM EMP;
+
+-- WAQTD names of employee earning max salary.
+
+-- WAQTD second max salary
+
+# NESTED SUBQUERY
+A subquery which is written inside another subquery is called as nested subquery.
+In nested subquery always inner most query executes first.
+
+-- WAQTD third maximum number
 
 
 
