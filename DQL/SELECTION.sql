@@ -699,8 +699,18 @@ SELECT MAX(SAL)
 FROM EMP;
 
 -- WAQTD names of employee earning max salary.
+SELECT ENAME
+FROM EMP
+WHERE SAL IN (SELECT MAX(SAL)
+              FROM EMP);
 
--- WAQTD second max salary
+
+-- WAQTD second max 
+SELECT MAX(SAL)
+FROM EMP
+WHERE SAL < (SELECT MAX(SAL)
+             FROM EMP);
+
 
 # NESTED SUBQUERY
 A subquery which is written inside another subquery is called as nested subquery.
