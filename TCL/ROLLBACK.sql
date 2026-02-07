@@ -12,14 +12,14 @@ Thre are 3 types in TCL
 2. ROLLBACK
     It is used to get back to the latest saved location.
     We can perform a ROLLBACK after a data manipulation operation like INSERT, UPDATE or DELETE.
-    After committing the manipulaton operations we can not rollback the commited operations which are fixed or unchangeable. 
+    After committing the manipulation operations we can not rollback the commited operations which are fixed or unchangeable. 
 
 
 SYNTAX - ROLLBACK;
 
 
 EXAMPLE - SELECT *
-          FROM BANK;
+          FROM BANK
 
      --   ROLLBACK;   remove the changes
 
