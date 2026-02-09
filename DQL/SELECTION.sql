@@ -753,11 +753,29 @@ WHERE SAL > (SELECT SAL
              FROM EMP
              WHERE JOB = "CLERK");
 
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+#SUBQUERY OPERATOR ( ALL , ANY )
 
+1. ALL - It is a special operator which has to be used along with relational operators to compare the values present at R.H.S. ALL operators return true if all the values present at R.H.S satisfies the condition.
 
+-- WAQTD details of employee earning more than clerk.
+SELECT * 
+FROM EMP
+WHERE SAL > (SELECT SAL 
+             FROM EMP
+             WHERE JOB = "CLERK");
 
+-- WAQTD details of employee earning more than salesman and less than manager.
+SELECT *
+FROM EMP
+WHERE SAL >ALL (SELECT SAL 
+                FROM EMP
+                WHERE JOB = "SALESMAN") AND  SAL <ALL (SELECT SAL 
+                                                       FROM EMP
+                                                       WHERE JOB = "MANAGER");
 
+2. ANY - It is a special operator which has to be used along with relational operator to compare the values present at R.H.S. ANY operators return true if any one of the values present at R.H.S satisfies the condition.
 
 
 
