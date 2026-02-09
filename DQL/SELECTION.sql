@@ -717,17 +717,41 @@ A subquery which is written inside another subquery is called as nested subquery
 In nested subquery always inner most query executes first.
 
 -- WAQTD third maximum number
+SELECT MIN(SAL)
+FROM EMP
+WHERE SAL > (SELECT MIN(SAL)
+             FROM EMP
+             WHERE SAL > (SELECT MIN(SAL)
+                          FROM EMP));
 
+-- WAQTD details of employe earning second maximum salary.
+SELECT *
+FROM EMP
+WHERE SAL IN (SELECT MAX(SAL)
+              FROM EMP
+              WHERE SAL < (SELECT MAX(SAL)
+                           FROM EMP));
 
+-- WAQTD location of employee earning 4 minimum salary.
+SELECT LOC
+FROM DEPT
+WHERE DEPTNO IN SELECT DEPTNO
+                FROM EMP
+                WHERE SAL IN (SELECT MIN(SAL)
+                              FROM EMP
+                              WHERE SAL > (SELECT MIN(SAL)
+                                           FROM EMP
+                                           WHERE SAL > (SELECT MIN(SAL)      
+                                                        FROM EMP  
+                                                        WHERE SAL > (SELECT MIN(SAL)
+                                                                     FROM EMP))));       
 
-
-
-
-
-
-
-
-
+-- WAQTD details of employee earning more than clerk.
+SELECT *
+FROM EMP
+WHERE SAL > (SELECT SAL
+             FROM EMP
+             WHERE JOB = "CLERK");
 
 
 
