@@ -793,7 +793,35 @@ WHERE SAL >ALL (SELECT SAL
                                                            FROM EMP
                                                            WHERE JOB = "MANAGER");    
 
+-- WAQTD details of employee if they are earning more than the employee who is having character 'A' in his name and they are hired before the employee who is working in location of 'NEW YORK'. 
+SELECT *
+FROM EMP 
+WHERE SAL >ALL ( SELECT SAL
+                  FROM EMP
+                  WHERE ENAME LIKE '%A%') AND HIREDATE <ALL ( SELECT HIREDATE
+                                                              FROM EMP
+                                                              WHERE DEPTNO IN ( SELECT DEPTNO
+                                                                                FROM DEPT
+                                                                                WHERE LOC = 'NEW YORK')); 
 
+# EMPLOYEE-MANAGER RELATIONSHIP (EMP-MGR)
+1. CASE 1 - TO IDENTIFY MANAGER
+         In this case we will get the employee name with the help of that employee name we will get manager name.
+
+Example - SELECT *
+          FROM EMP
+          WHERE EMPNO = ( SELECT MGR
+                          FROM EMP
+                          WHERE ENAME = 'JONES');
+
+2. CASE 2 - In this case we will get the names of manager with the help of manager name we will get that how many employee are reporting to that manager.
+
+-- WAQTD names of the employee reporting to shizuka.
+SELECT ENAME
+FROM EMP
+WHERE MGR IN ( SELECT EID
+               FROM EMP
+               WHERE ENAME = "SHIZUKA");   
 
 
 
