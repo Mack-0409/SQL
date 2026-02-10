@@ -751,7 +751,7 @@ SELECT *
 FROM EMP
 WHERE SAL > (SELECT SAL
              FROM EMP
-             WHERE JOB = "CLERK");
+             WHERE JOB = 'CLERK');
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -764,16 +764,16 @@ SELECT *
 FROM EMP
 WHERE SAL > (SELECT SAL 
              FROM EMP
-             WHERE JOB = "CLERK");
+             WHERE JOB = 'CLERK');
 
 -- WAQTD details of employee earning more than salesman and less than manager.
 SELECT *
 FROM EMP
 WHERE SAL >ALL (SELECT SAL 
                 FROM EMP
-                WHERE JOB = "SALESMAN") AND  SAL <ALL (SELECT SAL 
+                WHERE JOB = 'SALESMAN') AND  SAL <ALL (SELECT SAL 
                                                        FROM EMP
-                                                       WHERE JOB = "MANAGER");
+                                                       WHERE JOB = 'MANAGER');
 
 2. ANY - It is a special operator which has to be used along with relational operator to compare the values present at R.H.S. ANY operators return true if any one of the values present at R.H.S satisfies the condition.
 
@@ -782,16 +782,16 @@ SELECT *
 FROM EMP
 WHERE SAL >ANY (SELECT SAL
                 FROM EMP  
-                WHERE JOB = "CLERK");  
+                WHERE JOB = 'CLERK');  
 
 -- WAQTD details of employee earning more than salesman and hired after manager.
 SELECT *
 FROM EMP
 WHERE SAL >ALL (SELECT SAL 
                 FROM EMP
-                WHERE JOB = "SALESMAN") AND HIREDATE >ALL (SELECT HIREDATE
+                WHERE JOB = 'SALESMAN') AND HIREDATE >ALL (SELECT HIREDATE
                                                            FROM EMP
-                                                           WHERE JOB = "MANAGER");    
+                                                           WHERE JOB = 'MANAGER');    
 
 -- WAQTD details of employee if they are earning more than the employee who is having character 'A' in his name and they are hired before the employee who is working in location of 'NEW YORK'. 
 SELECT *
@@ -821,9 +821,25 @@ SELECT ENAME
 FROM EMP
 WHERE MGR IN ( SELECT EID
                FROM EMP
-               WHERE ENAME = "SHIZUKA");   
+               WHERE ENAME = 'SHIZUKA');   
 
+-- WAQTD number of employee reporting to jones.
+SELECT COUNT(*)
+FROM EMP
+WHERE MGR IN ( SELECT EMPNO
+               FROM EMP
+               WHERE ENAME = 'JONES');
 
+-- WAQTD department names of the employee reporting to king.
+SELECT DNAME
+FROM EMP
+WHERE DEPTNO IN ( SEWLECT DEPT
+                  FROM EMP
+                  WHERE MGR IN ( SELECT EMPNO
+                                 FROM EMP
+                                 WHERE ENAME = 'KING'));
+
+-- WAQTD department name of adams manager.
 
 
 
