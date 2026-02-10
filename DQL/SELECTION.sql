@@ -333,7 +333,8 @@ Types of Function
 
 1. SINGLE ROW FUNCTIONS [SRF] 
 It executes row by row. It takes one input executes and generate one output  and goes to the next input and goes on. If we pass 'n' number of inputs to single row functons it returns 'n' number of outputs.
-
+         
+         
 2. MULTI ROW FUNCTIONS / AGGREGATE / GROUP FUNCTIONS [MRF] 
 It is also known as group function or aggregate functions. It executes group by group. It takes all the input at once and aggregate [combine] it and generate single output. If we pass 'n' number of inputs to multi row function it will return single input.
 
@@ -840,8 +841,13 @@ WHERE DEPTNO IN ( SEWLECT DEPT
                                  WHERE ENAME = 'KING'));
 
 -- WAQTD department name of adams manager.
-
-
+SELECT DNAME 
+FROM EMP
+WHERE DEPTNO IN ( SELECT DEPTNO
+                  FROM EMP
+                  WHERE EMPNO IN ( SELECT MGR
+                                   FROM EMP
+                                   WHERE ENAME = 'ADAMS'));
 
 
 
