@@ -333,6 +333,24 @@ Types of Function
 
 1. SINGLE ROW FUNCTIONS [SRF] 
 It executes row by row. It takes one input executes and generate one output  and goes to the next input and goes on. If we pass 'n' number of inputs to single row functons it returns 'n' number of outputs.
+
+LIST OF SRF [SINGLE ROW FUNCTIONS]
+
+1. LENGTH() -
+2. CONCAT() - 
+3. LOWER() - 
+4. UPPER () -
+5. TO CHAR () -
+6. INITCAP () -
+7. REVERSE () -
+8. SUBSTR () -
+9. INSTR () -
+10.MOD () - 
+11.REPLACE () -
+12.ROUND () -
+13.TRUNC ()
+14.NVL () -
+         
          
          
 2. MULTI ROW FUNCTIONS / AGGREGATE / GROUP FUNCTIONS [MRF] 
@@ -848,6 +866,7 @@ WHERE DEPTNO IN ( SELECT DEPTNO
                   WHERE EMPNO IN ( SELECT MGR
                                    FROM EMP
                                    WHERE ENAME = 'ADAMS'));
+
 
 
 
