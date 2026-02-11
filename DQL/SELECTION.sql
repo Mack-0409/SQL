@@ -336,11 +336,15 @@ It executes row by row. It takes one input executes and generate one output  and
 
 LIST OF SRF [SINGLE ROW FUNCTIONS]
 
-1. LENGTH() -
+1. LENGTH() - This function is used to count the number of character present in the give string.
+SYNTAX - LENGTH('string')
+EXAMPLE - SELECT LENGTH('MAYANK')
+          FROM DUAL;
+
 2. CONCAT() - 
 3. LOWER() - 
 4. UPPER () -
-5. TO CHAR () -
+5. TO_CHAR () -
 6. INITCAP () -
 7. REVERSE () -
 8. SUBSTR () -
