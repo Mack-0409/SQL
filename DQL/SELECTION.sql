@@ -366,7 +366,13 @@ EXAMPLE - SELECT UPPER('MAYANK')
           FROM DUAL;
 
 5. TO_CHAR () -
-6. INITCAP () -
+         
+6. INITCAP () - This function is used to convert the given string initial alphabate into upercase and remaining alphabate into lowercase.
+SYNTAX - INITCAP('STRING')
+         FROM DUAL;
+EXAMPLE - SELECCT INITCAP('MAYANK')
+          FROM DUAL;
+
 7. REVERSE () -
 8. SUBSTR () -
 9. INSTR () -
