@@ -336,13 +336,29 @@ It executes row by row. It takes one input executes and generate one output  and
 
 LIST OF SRF [SINGLE ROW FUNCTIONS]
 
+NOTE - DUAL is the dummy table which has exactly one row and one column which is used to get the result.
+
 1. LENGTH() - This function is used to count the number of character present in the give string.
 SYNTAX - LENGTH('string')
 EXAMPLE - SELECT LENGTH('MAYANK')
           FROM DUAL;
 
-2. CONCAT() - 
-3. LOWER() - 
+-- WAPTD names of the employee if the employes names has exactly  4 character.
+SELECT ENAME
+FROM EMP
+WHERE LENGTH(ENAME) = 4;
+
+2. CONCAT() - This function is used to join the given two strings.
+SYNTAX - CONCAT('STRING1','STRING2')
+EXAMPLE - SELECT CONCAT('MR.','MAYANK')
+          FROM DUAL;
+
+3. LOWER() - This function is used to convert the given string into lowercase.
+SYNTAX - LOWER('STRING')
+         FROM DUAL;
+EXAMPLE - SELECT LOWER('MAYANK')
+          FROM DUAL;
+
 4. UPPER () -
 5. TO_CHAR () -
 6. INITCAP () -
