@@ -359,7 +359,12 @@ SYNTAX - LOWER('STRING')
 EXAMPLE - SELECT LOWER('MAYANK')
           FROM DUAL;
 
-4. UPPER () -
+4. UPPER () - This function is used to convert the given string into uppercase.
+SYNTAX - UPPER('STRING')
+         FROM DUAL;
+EXAMPLE - SELECT UPPER('MAYANK')
+          FROM DUAL;
+
 5. TO_CHAR () -
 6. INITCAP () -
 7. REVERSE () -
