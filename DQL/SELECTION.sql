@@ -402,7 +402,8 @@ WHERE MGR IN (SELECT MGR
               FROM EMP
               WHERE ENAME = 'BLAKES');
 
-9. INSTR () - 
+9. INSTR () - This function is used to replace the given old string with new string or it will remove the given old string from the original string.
+
 10.MOD () - 
 11.REPLACE () -
 12.ROUND () -
