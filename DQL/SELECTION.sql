@@ -402,10 +402,24 @@ WHERE MGR IN (SELECT MGR
               FROM EMP
               WHERE ENAME = 'BLAKES');
 
-9. INSTR () - This function is used to replace the given old string with new string or it will remove the given old string from the original string.
-
+9. INSTR () - 
 10.MOD () - 
-11.REPLACE () -
+11.REPLACE () - This function is used to replace the given old string with new string or it will remove the given old string from the original string.
+SYNTAX - REPLACE('ORIGINAL STRING','OLD STRING', [NEW STRING])
+         FROM DUAL;
+
+EXAMPLE - SELECT REPLACE('BANANA','N','T')
+          FROM DUAL;
+
+-- WAQTD number of character 'A' present in each name
+SELECT LENGTH(ENAME)-LENGTH(REPLACE(ENAME,'A'))
+FROM EMP;
+
+-- WAQTD name of the employee who names have character 'A' but exactly twice
+SELECT ENAME 
+FROM EMP
+WHERE LENGTH(ENAME) - LENGTH(REPLACE(NAME,'A')) = 2;
+
 12.ROUND () -
 13.TRUNC ()
 14.NVL () -
