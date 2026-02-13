@@ -373,9 +373,36 @@ SYNTAX - INITCAP('STRING')
 EXAMPLE - SELECCT INITCAP('MAYANK')
           FROM DUAL;
 
-7. REVERSE () -
-8. SUBSTR () -
-9. INSTR () -
+7. REVERSE () - This function is used to reverse the given string.
+SYNTAX - REVERSE('STRING')
+EXAMPLE - SELECT REVERSE('BANANA')
+          FROM DUAL;
+
+8. SUBSTR () - This function is used to optain the part of the original string.
+SYNTAX - SUBSTR('ORIGINAL STRING', POSITION , [LENGTH])
+EXAMPLE - SUBSTR('MAHABHARAT',5,6)
+          FROM DUAL;
+
+-- WAQTD first 3 character of employee name.
+SELECT SUBSTR(ENAME,1,3)
+FROM EMP;
+
+-- WAQTD last 3 character of employee
+SELECT SUBSTR(ENAME,-3)
+FROM EMP;
+
+-- WAQTD first half of the employee
+SELECT SUBSTR(ENAME,1,LENGTH(ENAME)/2)
+FROM EMP;
+
+-- WAQTD names of the employee reporting to the Blakes manager
+SELECT ENAME
+FROM EMP
+WHERE MGR IN (SELECT MGR
+              FROM EMP
+              WHERE ENAME = 'BLAKES');
+
+9. INSTR () - 
 10.MOD () - 
 11.REPLACE () -
 12.ROUND () -
