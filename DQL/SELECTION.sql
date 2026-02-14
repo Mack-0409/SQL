@@ -429,11 +429,17 @@ EXAMPLE - ROUND(5.2) = 5
          
 13.TRUNC () - This function is used to round off the given number to its least value.
 SYNTAX - TRUNC(NUMBER)
+EXAMPLE - TRUNC(5.2) = 5
+          TRUNC(5.7) = 5
+          TRUNC(5.9) = 5
+          TRUNC(5.5) = 5        
 
-14.NVL () -
-         
-         
-         
+14.NVL () - NULL VALUE LOGIC [NVL] this function is used to eliminate the side effect of NULL in arithemetic operations
+SYNTAX - NVL( ARGUMENT1, ARGUMENT2)
+EXAMPLE - SELECT SAL + NVL (COMM, 0)
+          FROM EMP;
+
+
 2. MULTI ROW FUNCTIONS / AGGREGATE / GROUP FUNCTIONS [MRF] 
 It is also known as group function or aggregate functions. It executes group by group. It takes all the input at once and aggregate [combine] it and generate single output. If we pass 'n' number of inputs to multi row function it will return single input.
 
