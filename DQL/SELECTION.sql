@@ -420,8 +420,16 @@ SELECT ENAME
 FROM EMP
 WHERE LENGTH(ENAME) - LENGTH(REPLACE(NAME,'A')) = 2;
 
-12.ROUND () -
-13.TRUNC ()
+12.ROUND () - This funcion is used to round off the given number to its nearest value.
+SYNTAX - ROUND(NUMBER)
+EXAMPLE - ROUND(5.2) = 5
+          ROUND(5.9) = 6
+          ROUND(5.5) = 6
+          ROUND(5.4) = 5
+         
+13.TRUNC () - This function is used to round off the given number to its least value.
+SYNTAX - TRUNC(NUMBER)
+
 14.NVL () -
          
          
