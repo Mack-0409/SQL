@@ -365,7 +365,23 @@ SYNTAX - UPPER('STRING')
 EXAMPLE - SELECT UPPER('MAYANK')
           FROM DUAL;
 
-5. TO_CHAR () -
+5. TO_CHAR () - This function is used to convert the given date into string format by using format models.
+SYNTAX - To_CHAR (DATE , 'FORMATE_MODELS')
+         1. YEAR
+         2. YYYY
+         3. YY
+         4. MONTH
+         5. MON
+         6. MM
+         7. DD
+         8. DAY
+         9. HH24
+         10. HH12
+         11. HH12
+         12. SS
+
+EXAMPLE - SELECT TO_CHAR (SYSDATE, 'YYYY:MM:D:HH12:MI:SS')
+          FROM DUAL;
          
 6. INITCAP () - This function is used to convert the given string initial alphabate into upercase and remaining alphabate into lowercase.
 SYNTAX - INITCAP('STRING')
