@@ -419,7 +419,14 @@ WHERE MGR IN (SELECT MGR
               WHERE ENAME = 'BLAKES');
 
 9. INSTR () - 
-10.MOD () - 
+10.MOD () - This function is used to obtain the reminder of the given number.
+SYNTAX - MOD( m, n )
+EXAMPLE - SELECT MOD( 3, 4 )
+          FROM DUAL;
+
+          SELECT MOD( 5, 2 )
+          FROM DUAL;         
+         
 11.REPLACE () - This function is used to replace the given old string with new string or it will remove the given old string from the original string.
 SYNTAX - REPLACE('ORIGINAL STRING','OLD STRING', [NEW STRING])
          FROM DUAL;
