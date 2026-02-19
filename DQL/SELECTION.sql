@@ -418,7 +418,15 @@ WHERE MGR IN (SELECT MGR
               FROM EMP
               WHERE ENAME = 'BLAKES');
 
-9. INSTR () - 
+9. INSTR () - This function is used to optain the position of the string which is present in the original string.
+SYNTAX - INSTR('ORIGINAL_STRING','STRING',POSITION,[OCCURANCE])
+         POSITION - Cannot be negative.
+         OCCURANCE - Can move from right to left in negative manner but output will be in positive.
+EXAMPLE - INSTR('MALAYALAM','A',1,3)
+          FROM DUAL;
+
+          
+         
 10.MOD () - This function is used to obtain the reminder of the given number.
 SYNTAX - MOD( m, n )
 EXAMPLE - SELECT MOD( 3, 4 )
@@ -545,7 +553,7 @@ WHERE ENAME LIKE '%A%'
 GROUP BY DEPTNO;
 
 -- WAQTD MAX salary of the employee along with there average salary if there salary is more than 2000 and they are hired after 1980 in each job. 
-SELECT MAX(SAL) , AVG(SAL) , JOB
+SELECT MAX(SAL) , AVG(SAL                                                              ) , JOB
 FROM EMP
 WHERE SAL > 2000 AND HIREDATE > '31-DEC-80'
 GROUP BY JOB;
