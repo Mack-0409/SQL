@@ -68,3 +68,7 @@ We can pass multiple column to DISTINCT clause it will remove repeated or duplic
 -- WAQT remove duplicated or repeated values from the salary column.
 SELECT DISTINCT SAL
 FROM EMP; 
+
+-- WAQTD salary of the employee and hire date and commission.
+SELECT SAL, HIREDATE, COMM
+FROM EMP;
