@@ -37,7 +37,7 @@ There are 5 statements in DDL
 
 NOTE - 
 
-To add foreign key
+To add FOREIGN KEY
 
 ALTER TABLE TABLE_NAME
 ADD CONSTRAINTS [REF_NAME] FOREIGN KEY (COLUMN_NAME)
