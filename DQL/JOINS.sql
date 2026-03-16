@@ -6,12 +6,26 @@ There are 5 types in JOIN
 SYNTAX - 
   i. ANSI - American National Standard Institute
             SELECT COLUMN_NAME
-            FROM TABLE_NAME 1 CROSS JOIN TABLE_NAME 2;
+            FROM TABLE_NAME_1 CROSS JOIN TABLE_NAME_2;
   ii. ORACLE - SELECT COLUMN_NAME
-               FROM TABLE_NAME 1, TABLE_NAME 2;
+               FROM TABLE_NAME_1, TABLE_NAME_2;
 
 2. INNER JOIN / EQUI JOIN - It is used to obtain the matching records.
-  
+SYNTAX - 
+  i. ANSI - American National Standard Institute
+            SELECT COLUMN_NAME
+            FROM TABLE_NAME_1 INNER JOIN TABLE_NAME_2
+            ON <JOIN CONDITION>;
+  ii. ORACLE - SELECT COLUMN_NAME
+               FROM TABLE_NAME_1 , TABLE_NAME_2
+               WHERE <JOIN CONDITION>;
+
+-- WAQTD ENAME AND DNAME
+SELECT ENAME , DNAME
+FROM EMP , DEPT
+WHERE EMP.DNO = DEPT.DNO;
+
+
 3. OUTER JOIN
   i. LEFT OUTER JOIN
   ii. RIGHT OUTER JOIN
