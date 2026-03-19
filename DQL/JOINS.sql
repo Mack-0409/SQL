@@ -50,10 +50,12 @@ SELECT ENAME , DENAME
 FROM EMP , DEPT
 WHERE EMP.DEPTNO = DEPT.DEPTNO AND JOB='MANAGER' AND LOC='DALLAS';
 
-3. OUTER JOIN (Page no 70)
-  i. LEFT OUTER JOIN
-  ii. RIGHT OUTER JOIN
-  iii. FULL OUTER JOIN
+3. OUTER JOIN - It is used to optain the unmatched records along with matching records.
+  There are 3 types in OUTER JOIN
+  
+    i. LEFT OUTER JOIN
+    ii. RIGHT OUTER JOIN
+    iii. FULL OUTER JOIN
   
 4. NATURAL JOIN
   
