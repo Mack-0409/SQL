@@ -53,9 +53,20 @@ WHERE EMP.DEPTNO = DEPT.DEPTNO AND JOB='MANAGER' AND LOC='DALLAS';
 3. OUTER JOIN - It is used to optain the unmatched records along with matching records.
   There are 3 types in OUTER JOIN
   
-    i. LEFT OUTER JOIN
-    ii. RIGHT OUTER JOIN
-    iii. FULL OUTER JOIN
+    I. LEFT OUTER JOIN - It is used to optain unmatched records from the left table along with matching records from both the table.
+    SYNTAX - 
+      i. ANSI - American National Standard Institute
+        SELECT COLUMN_NAME
+        FROM TABLE_NAME_1 LEFT [OUTER] JOIN TABLE_NAME_2
+        ON <JOIN_CONDITION>L;
+
+      ii. ORACLE
+        SELECT COLUMN_NAME
+        FROM TABLE_NAME_1 , TABLE_NAME_2
+        WHERE TABLE_NAME_1.COLUMN_NAME = TABLE_NAME_2.COLUMN_NAME;
+
+    II. RIGHT OUTER JOIN
+    III. FULL OUTER JOIN
   
 4. NATURAL JOIN
   
