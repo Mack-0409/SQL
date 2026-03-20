@@ -65,7 +65,8 @@ WHERE EMP.DEPTNO = DEPT.DEPTNO AND JOB='MANAGER' AND LOC='DALLAS';
         FROM TABLE_NAME_1 , TABLE_NAME_2
         WHERE TABLE_NAME_1.COLUMN_NAME = TABLE_NAME_2.COLUMN_NAME;
 
-    II. RIGHT OUTER JOIN - 
+    II. RIGHT OUTER JOIN - It is used to optain unmatched records from the right table along with matching records from bot the table.
+    SYNTAX - 
       
     III. FULL OUTER JOIN - 
   
