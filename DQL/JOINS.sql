@@ -105,4 +105,16 @@ NOTE - In natural join no need to write join condition.
 
   SYNTAX - 
     i. ANSI - American National Standard Institute
-      
+      SELECT COLUMN_NAME
+      FROM TABLE_NAME_1 JOIN TABLE_NAME_2
+      ON <JOIN CONDITION> ;
+
+    ii. ORACLE
+      SELECT COLUMN_NAME
+      FROM TABLE_NAME_1 , TABLE_NAME_2
+      WHERE <JOIN CONDITION>;
+
+    EXAMPLE - 
+      SELECT E1.ENAME , E2.ENAME AS MGR_NAME
+      FROM EMP1 , EMP2
+      WHERE E1.MGR = E2.EID;
